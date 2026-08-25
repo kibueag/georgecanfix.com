@@ -158,24 +158,56 @@ body {
   .tagline {
     font-size: 1.05rem;
   }
-}
-/* Featured Poster Section */
-.featured-poster {
-  padding: 40px 0 20px;
+/* Live Fixes Gallery */
+.live-fixes {
+  padding: 60px 0;
   text-align: center;
 }
 
-.poster-wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
-  border: 1px solid var(--glass-border);
+.section-subtext {
+  color: var(--text-muted);
+  margin-bottom: 40px;
 }
 
-.poster-img {
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(229, 57, 53, 0.6);
+}
+
+.gallery-img {
   width: 100%;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
   display: block;
+}
+
+.gallery-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.gallery-info h4 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.gallery-info p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
