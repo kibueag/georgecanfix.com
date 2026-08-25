@@ -1,9 +1,14 @@
 :root {
   --primary-color: #d32f2f;
+  --primary-hover: #b71c1c;
   --dark-color: #1a1a1a;
   --light-bg: #f4f5f7;
   --white: #ffffff;
   --text-muted: #555555;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -55,11 +60,16 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-primary:hover {
-  background-color: #b71c1c;
+  background-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
 }
 
 /* About Section */
@@ -103,6 +113,12 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border-top: 4px solid var(--primary-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
@@ -135,6 +151,11 @@ body {
 .phone-link a {
   color: var(--primary-color);
   text-decoration: none;
+  font-weight: bold;
+}
+
+.phone-link a:hover {
+  text-decoration: underline;
 }
 
 .location {
@@ -148,6 +169,7 @@ body {
   border-top: 1px solid #333;
   padding-top: 15px;
 }
+
 /* Responsive Image Styling */
 .preview-banner {
   width: 100%;
