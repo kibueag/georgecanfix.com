@@ -148,3 +148,13 @@ body {
   border-top: 1px solid #333;
   padding-top: 15px;
 }
+/* Responsive Image Styling */
+.preview-banner {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
